@@ -1,22 +1,20 @@
 #include "main.h"
 
 /**
- * more_numbers - prints 10 times the numbers, from 0 to 14
+ * print_line - draws a straight line in the terminal
+ * @n: the number of times
  */
 
-void more_numbers(void)
+void print_line(int n)
 {
-	int l;
-	char i;
+	int i;
 
-	for (l = 1 ; l <= 10 ; l++)
+	if (n <= 0)
+		_putchar('\n');
+	else
 	{
-		for (i = 0 ; i <= 14 ; i++)
-		{
-			if (i > 9)
-				_putchar('1');
-			_putchar(i % 10 + '0');
-		}
+		for (i = 1 ; i <= n ; i++)
+			_putchar('_');
 		_putchar('\n');
 	}
 }
